@@ -1,3 +1,50 @@
 body {
-    background-color: cornflowerblue;
+    font-family: Papyrus, fantasy;
+    background-image: url("../images/windows-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.needsBG {
+    border: 2px solid #bbbdbf;
+    background-color: rgba(223, 230, 224, 0.5);
+    margin: 20px auto 25px;
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+}
+
+.stat {
+    font-size: xx-large;
+    color: greenyellow;
+}
+
+.statTitle {
+    text-decoration: underline;
+}
+
+.button {
+    border: 5px solid #b6cb83;
+    border-radius: 30px;
+    background-color: rgba(223, 230, 224, 0.8);
+    font-size: x-large;
+    margin: 10px auto;
+    display: block;
+    padding: 7px 10px;
+}
+
+.character {
+    margin: 150px auto 25px;
+    display: block;
+    width: 100px;
+}
+
+#stats-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#age {
+    color: magenta
 }

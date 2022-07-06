@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tamagotchi Project</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <h1 class="needsBG">Epic Tamagotchi Game</h1>
+    <h2 class="needsBG">Starting the game will provide instructions and name selection.</h2>
+
+    <button type="button" class="button">BEGIN GAME</button>
+
+    <div>
+        <img class="character" src="images/egg.png" alt="EGG">
+    </div>
+
+    <div id="stats-area">
+        <article class="single-stat">
+            <h1 class="needsBG statTitle">Hunger</h1>
+            <div class="needsBG stat" id="hunger">5</div>
+            <button type="button" class="button">FEED</button>
+        </article>
+
+        <article class="single-stat">
+            <h1 class="needsBG statTitle">Sleepiness</h1>
+            <div class="needsBG stat" id="sleepiness">5</div>
+            <button type="button" class="button">SLEEP</button>
+        </article>
+
+        <article class="single-stat">
+            <h1 class="needsBG statTitle">Boredom</h1>
+            <div class="needsBG stat" id="boredom">5</div>
+            <button type="button" class="button">PLAY</button>
+        </article>
+
+        <article class="single-stat">
+            <h1 class="needsBG statTitle">Age</h1>
+            <div class="needsBG stat" id="age">0</div>
+        </article>
+
+    </div>
+
     <script type="text/javascript" src="js/app.js">
     </script>
 </body>
