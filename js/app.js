@@ -22,6 +22,8 @@ class Character {
 const hunger = document.querySelector(`#hunger`)
 const sleepiness = document.querySelector(`#sleepiness`)
 const boredom = document.querySelector(`#boredom`)
+const age = document.querySelector(`#age`)
+const character = document.querySelector(`#character`)
 const characterName = document.querySelector(`#character-name`)
 
 

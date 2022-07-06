@@ -33,7 +33,7 @@ body {
     padding: 7px 10px;
 }
 
-.character {
+#character {
     margin: 100px auto 25px;
     display: block;
     width: 100px;
