@@ -50,9 +50,24 @@ const playBtn = document.querySelector(`#playBtn`)
 
 //aging function
 const agePet = (characterToAge) => {
-    characterToAge.age ++
-    age.innerHTML = characterToAge.age
-    console.log(`yo`)
+    if (characterToAge.age === 14) {
+        characterImg.src = `images/stg-4.jpg`
+        characterToAge.age ++
+        age.innerHTML = characterToAge.age
+    }
+    if (characterToAge.age === 9) {
+        characterImg.src = `images/stg-3.png`
+        characterToAge.age ++
+        age.innerHTML = characterToAge.age
+    }
+    if (characterToAge.age === 4) {
+        characterImg.src = `images/stg-2.png`
+        characterToAge.age ++
+        age.innerHTML = characterToAge.age
+    } else {
+        characterToAge.age ++
+        age.innerHTML = characterToAge.age
+    }
 }
 
 //game function
@@ -73,7 +88,7 @@ const runGame = () => {
     feedBtn.addEventListener(`click`, () => {character.feed()})
     sleepBtn.addEventListener(`click`, () => {character.sleep()})
     playBtn.addEventListener(`click`, () => {character.play()})
-    setInterval(agePet(character), 1000)
+    setInterval(() => {agePet(character)}, 1000)
 }
 
 //begin button
@@ -89,11 +104,3 @@ beginBtn.addEventListener(`click`, runGame)
 
 
 
-    // if (characterToAge.age = 14) {
-    //     characterImg.src = `images/stg-4.png`
-    //     character.age ++
-    // }
-    // if (character.age = 9) {
-    //     characterImg.src = `images/stg-3.png`
-    // }
-    // if (character.age = )
