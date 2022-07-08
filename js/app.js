@@ -91,7 +91,7 @@ const statsDec = (nameOfChar) => {
 //game function
 const runGame = () => {
     // alert(`Welcome to the most epic Tamagotchi game!`)
-    // alert(`After entering your pet's name and clicking the begin game button, a timer will begin that slowly lowers your stats as well as slowly aging your pet.`)
+    // alert(`After entering your pet's name, a timer will begin that slowly lowers your stats as well as slowly aging your pet.`)
     // alert(`Once a stat reaches 0, it's game over! Click the different activity buttons to up your pet's stats and stay alive.`)
     // alert(`Eventually, when your pet is old enough, it will evolve. Try to make it to the last evolution!`)
     let name = prompt(`Choose your pet's name!`, `Turdle`)
@@ -108,6 +108,12 @@ const runGame = () => {
     playBtn.addEventListener(`click`, () => {character.play()})
     setInterval(() => {agePet(character)}, 5000)
     setInterval(() => {statsDec(character)}, 3000)
+    setInterval(() => {
+        if (character.hunger === 0 || character.sleepiness === 0 || character.boredom === 0) {
+        alert(`Boooooo! You have failed as a caretaker. Your pet has moved on to the next plane of existence. This page  will refresh and you can try again.`)
+        location.reload()
+        }
+    }, 1000)
 }
 
 //begin button
