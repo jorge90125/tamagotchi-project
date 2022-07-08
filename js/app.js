@@ -78,6 +78,16 @@ const agePet = (characterToAge) => {
     }
 }
 
+//stats decrease over time function
+const statsDec = (nameOfChar) => {
+    nameOfChar.hunger --
+    hunger.innerHTML = nameOfChar.hunger
+    nameOfChar.sleepiness --
+    sleepiness.innerHTML = nameOfChar.sleepiness
+    nameOfChar.boredom --
+    boredom.innerHTML = nameOfChar.boredom
+}
+
 //game function
 const runGame = () => {
     // alert(`Welcome to the most epic Tamagotchi game!`)
@@ -96,7 +106,8 @@ const runGame = () => {
     feedBtn.addEventListener(`click`, () => {character.feed()})
     sleepBtn.addEventListener(`click`, () => {character.sleep()})
     playBtn.addEventListener(`click`, () => {character.play()})
-    setInterval(() => {agePet(character)}, 1000)
+    setInterval(() => {agePet(character)}, 5000)
+    setInterval(() => {statsDec(character)}, 3000)
 }
 
 //begin button
