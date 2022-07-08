@@ -29,8 +29,10 @@ class Character {
         if (this.sleepiness >= 10) {
             return
         } else {
+            document.body.style.backgroundImage = `url('../tamagotchi-project/images/windows-bg-night.jpeg')`
             this.sleepiness ++
             sleepiness.innerHTML = this.sleepiness
+            setTimeout(() => {document.body.style.backgroundImage = `url('../tamagotchi-project/images/windows-bg.jpeg')`}, 2000)
         }
     }
     play() {
@@ -54,16 +56,22 @@ const agePet = (characterToAge) => {
         characterImg.src = `images/stg-4.jpg`
         characterToAge.age ++
         age.innerHTML = characterToAge.age
+        characterName.innerHTML = `LVL 4 ${characterToAge.name}`
+        characterImg.style.width = `300px`
     }
     if (characterToAge.age === 9) {
         characterImg.src = `images/stg-3.png`
         characterToAge.age ++
         age.innerHTML = characterToAge.age
+        characterName.innerHTML = `LVL 3 ${characterToAge.name}`
+        characterImg.style.width = `200px`
     }
     if (characterToAge.age === 4) {
         characterImg.src = `images/stg-2.png`
         characterToAge.age ++
         age.innerHTML = characterToAge.age
+        characterName.innerHTML = `LVL 2 ${characterToAge.name}`
+        characterImg.style.width = `150px`
     } else {
         characterToAge.age ++
         age.innerHTML = characterToAge.age
