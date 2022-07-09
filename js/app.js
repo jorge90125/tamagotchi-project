@@ -90,11 +90,14 @@ const statsInc = (nameOfChar) => {
 
 //game function
 const runGame = () => {
+    //instructions
     alert(`Welcome to the most epic Tamagotchi game!`)
     alert(`After entering your pet's name, a timer will begin that slowly raises your stats as well as slowly aging your pet.`)
-    alert(`Once a stat reaches 10, it's game over! Click the different activity buttons to keep your  pet's stats down and stay alive.`)
+    alert(`Once a stat reaches 10, it's game over! Click the different activity buttons to keep your pet's stats down and stay alive.`)
     alert(`Eventually, when your pet is old enough, it will evolve. Try to make it to the last evolution!`)
+    //name choice
     let name = prompt(`Choose your pet's name!`, `Turdle`)
+    //create character and set HTML
     const character = new Character(`${name}`)
     hunger.innerHTML = character.hunger
     sleepiness.innerHTML = character.sleepiness
@@ -103,9 +106,11 @@ const runGame = () => {
     characterImg.src = `images/stg-1.png`
     characterImg.style.width = `125px`
     characterName.innerHTML = `LVL 1 ${character.name}`
+    //listen for buttons
     feedBtn.addEventListener(`click`, () => {character.feed()})
     sleepBtn.addEventListener(`click`, () => {character.sleep()})
     playBtn.addEventListener(`click`, () => {character.play()})
+    //intervals
     const ageInterval = setInterval(() => {agePet(character)}, 2000)
     const statInterval = setInterval(() => {statsInc(character)}, 3000)
     const deadInterval = setInterval(() => {
