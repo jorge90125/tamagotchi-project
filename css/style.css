@@ -26,11 +26,16 @@ body {
 .button {
     border: 5px solid #b6cb83;
     border-radius: 30px;
-    background-color: rgba(223, 230, 224, 0.8);
+    background-color: rgba(223, 230, 224);
     font-size: x-large;
     margin: 10px auto;
     display: block;
     padding: 7px 10px;
+}
+
+.button:hover {
+    background-color: #ab2695;
+    color: antiquewhite;
 }
 
 @keyframes move-sprite {
